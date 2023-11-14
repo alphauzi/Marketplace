@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct ShoppingApp: App {
+    
+    @StateObject private var vm = HomeViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
+                .environmentObject(vm)
         }
     }
 }
